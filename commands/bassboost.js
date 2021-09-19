@@ -5,6 +5,7 @@ const levels = {
     low: 0.2,
     medium: 0.3,
     high: 0.35,
+    extreme: 1,
 };
 module.exports = {
     name: "bassboost",
@@ -71,7 +72,7 @@ module.exports = {
             if (!player) return client.sendTime(interaction, "❌ | **Nothing is playing right now...**");
             if (!member.voice.channel) return client.sendTime(interaction, "❌ | **You must be in a voice channel to use this command.**");
             if (guild.me.voice.channel && !guild.me.voice.channel.equals(voiceChannel)) return client.sendTime(interaction, ":x: | **You must be in the same voice channel as me to use this command!**");
-            if (!args) return client.sendTime(interaction, "**Please provide a bassboost level. \nAvailable Levels:** `none`, `low`, `medium`, `high`"); //if the user do not provide args [arguments]
+            if (!args) return client.sendTime(interaction, "**Please provide a bassboost level. \nAvailable Levels:** `none`, `low`, `medium`, `high`, `extreme`"); //if the user do not provide args [arguments]
 
             let level = "none";
             if (args.length && args[0].value in levels) level = args[0].value;
