@@ -5,7 +5,7 @@ const levels = {
     low: 0.2,
     medium: 0.3,
     high: 0.35,
-    extreme: 1,
+    extreme: 2,
 };
 module.exports = {
     name: "bassboost",
@@ -63,7 +63,7 @@ module.exports = {
                 low: 0.2,
                 medium: 0.3,
                 high: 0.35,
-                extreme: 1,
+                extreme: 2,
             };
 
             let player = await client.Manager.get(interaction.guild_id);
